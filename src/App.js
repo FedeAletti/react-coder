@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import { ItemListContainer } from './components/ItemListContainer';
 import { NavBar } from './components/NavBar';
 
 
@@ -12,6 +13,7 @@ function App() {
           <h2>EAT, SLEEP AND SMOKE SHISHA.</h2>        
         </div>
       </section>
+      <ItemListContainer greeting="Bienvenido a mi tienda" user="Roberto"/>
     </>
   )
 }
