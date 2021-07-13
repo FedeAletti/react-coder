@@ -1,0 +1,7 @@
+.nav-link-p{
+    color: #efb537!important;
+  }
+.flex-navbar{
+    display: flex;
+    justify-content: space-around;
+}  

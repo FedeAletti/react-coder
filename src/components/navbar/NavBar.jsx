@@ -1,4 +1,6 @@
 import React from 'react'
+import { CartWidget } from '../cartwidget/CartWidget'
+import './navbar.css'
 
 export const NavBar = () => {
     return (
@@ -10,7 +12,7 @@ export const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse show m-auto" id="navbarBasic">
-                    <ul className="navbar-nav me-auto mb-2 mb-xl-0">
+                    <ul className="navbar-nav me-auto mb-2 mb-xl-0 flex-navbar">
                         <li className="nav-item">
                             <a className="nav-link nav-link-p" href="/#">Home</a>
                         </li>
@@ -35,8 +37,12 @@ export const NavBar = () => {
                             </li>
                     </ul>
                 </div>
+                
+                <CartWidget/>
             </div>
+            
         </nav>
+
         </>
     )
 }

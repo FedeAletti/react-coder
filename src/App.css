@@ -43,16 +43,3 @@
 }
 /* ============ Personalizados ============ */
 
-
-.nav-link-p{
-  color: #efb537!important;
-}
-
-.banner-1{
-  display: flex;
-  justify-content: center;
-}
-.banner-1 h2{
-  color: white;
-  margin: 0 auto;
-}
