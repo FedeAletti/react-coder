@@ -12,8 +12,8 @@ export const NavBar = () => {
                 <a className="navbar-brand fw-bold" href="/#"><img className="logo-nav" src={logo} alt=""/></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
-                </button>
-
+                </button>            
+                <CartWidget/>
                 <div className="collapse navbar-collapse show m-auto flex-navbar" id="navbarBasic">
                     <div className="">
                         <ul className="flex-navbar navbar-nav me-auto mb-2 mb-xl-0">
@@ -43,7 +43,6 @@ export const NavBar = () => {
                     </div>
                 </div>
                 
-                <CartWidget/>
             </div>
             
         </nav>

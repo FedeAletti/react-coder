@@ -9,3 +9,14 @@
     display: flex;
     justify-content: space-around;
 }  
+.cartWidget{
+    order:1;
+}
+@media (max-width:1199px){
+    .cartWidget{
+        order:0;
+    }
+}
+.navbar-toggler{
+    order:-1;
+}
