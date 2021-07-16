@@ -7,16 +7,26 @@
   }
 .flex-navbar{
     display: flex;
-    justify-content: space-around;
 }  
 .cartWidget{
-    order:1;
-}
-@media (max-width:1199px){
-    .cartWidget{
-        order:0;
-    }
+    order:0;
 }
 .navbar-toggler{
     order:-1;
 }
+
+@media (min-width:1199px){
+    .cartWidget{
+        order:1;
+    }
+    .nav-item{
+        margin-right: 3rem;
+    }
+    .nav-item:last-of-type{
+        margin-right: 0;
+    }
+    .flex-navbar{
+        justify-content: space-around;
+    }
+}
+

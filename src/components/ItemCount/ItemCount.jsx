@@ -1,4 +1,5 @@
 import {useState} from 'react' 
+import './itemcount.css'
 
 export const ItemCount = ({initial, stock, onAdd}) => {
 
@@ -16,22 +17,22 @@ export const ItemCount = ({initial, stock, onAdd}) => {
   
     return (
         <>
-            <div className="card text-center w-50">
+            <div className="card text-center item-count">
                 <div className="card-header">
                     <h4>Item</h4>
                 </div>
                 <div className="card-body"> 
                     <button onClick={handleRemove}>
-                        -
+                         <i className="fas fa-minus"></i>
                     </button>
-                    <label className="alert alert-white">
+                    <label className="alert alert-white cantidad-items">
                         {cantidad}
                     </label>
                     <button onClick={handleAdd}>
-                        +
+                         <i className="fas fa-plus"></i>
                     </button>                  
-                    <div className="d-block">
-                        <button className="btn btn-primary btn-block  "
+                    <div className="agreg-carrito">
+                        <button className="btn bg-principal text-white btn-block  "
                             onClick={()=>onAdd(cantidad)}>
                             Agregar al Carrito
                         </button>

@@ -1,0 +1,16 @@
+.item-count{
+    width: 50%;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+button i{
+    font-size: 1.2rem;
+}
+.cantidad-items{
+    font-size: 1.3rem;
+}
+.agreg-carrito{
+    display: block;
+}
