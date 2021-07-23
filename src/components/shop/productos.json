@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1, 
+        "title":"Blueberry Mint", 
+        "brand":"Zomo",
+        "price":450, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_BLUEBERRY_MINT.jpg"
+    },
+    {
+        "id": 2, 
+        "title":"Zomo Cola Mint", 
+        "brand":"Zomo",
+        "price":450, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COLA_MINT.jpg"
+    },
+    {
+        "id": 3, 
+        "title":"Zomo Cool Lemon",  
+        "brand":"Zomo",
+        "price":450, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COOL_LEMON.jpg"
+    },
+    {
+        "id": 4, 
+        "title":"Zomo Framboera",  
+        "brand":"Zomo",
+        "price":450, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/11/ZOMO_2019_PY_50G_FRAMBOERA.png"
+    },
+    {
+        "id": 5, 
+        "title":"Zomo Tanger",  
+        "brand":"Zomo",
+        "price":450, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_SPLASH_TANGER.jpg"
+    },
+    {
+        "id": 6, 
+        "title":"Zomo Dry Zahara",  
+        "brand":"Zomo",
+        "price":450, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_DRY_SAHARA.jpg"
+    }
+]

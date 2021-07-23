@@ -1,5 +1,6 @@
 import React from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
+import { ItemList } from './ItemList/ItemList'
 import './itemscontainer.css'
 
 export const ItemListContainer = (props) => {
@@ -20,6 +21,10 @@ export const ItemListContainer = (props) => {
             <div className="d-flex justify-content-center pt-2">
                 <ItemCount stock={9} initial={1} onAdd={handleCount}/>
             </div>
+            <div className="container mt-2">
+                <ItemList />
+            </div>
+
         </>
     )
 }
