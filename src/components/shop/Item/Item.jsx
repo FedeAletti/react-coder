@@ -1,11 +1,14 @@
 import React from 'react'
+import { ItemCount } from '../../ItemCount/ItemCount'
 
 export const Item = ({title, price, img, brand}) => { 
 
-    
+    const handleCount=(cant)=>{
+        alert(`Se agregaron ${cant} items de ${brand + ' ' + title}`);
+    }
     
     return (
-        <div className="col-md-4 mb-2 ">
+        <div className="col mb-2 ">
             <div className="height d-flex justify-content-center align-items-center">
                 <div className="card p-3 ">
                     <div className="d-flex justify-content-between align-items-center ">
@@ -20,8 +23,12 @@ export const Item = ({title, price, img, brand}) => {
                             <img src={img} width="200" alt=""/> 
                         </div>
                     </div>
+                    <div className="d-flex justify-content-center ">
+                        <ItemCount stock={9} initial={1} onAdd={handleCount}/>
+                    </div>
                 </div>
             </div>
+            
         </div>
     )
 }

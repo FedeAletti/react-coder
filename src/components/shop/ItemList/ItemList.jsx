@@ -16,7 +16,7 @@ export const ItemList = () => {
         <div className="row ">
             {state.map(prod =>(
                 <Item title={prod.title} price={prod.price} brand={prod.brand} img={prod.picUrl} key={prod.id} />
-            ))}
+            ))} 
         </div>
     )
 }
