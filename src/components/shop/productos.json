@@ -4,41 +4,47 @@
         "title":"Blueberry Mint", 
         "brand":"Zomo",
         "price":450, 
-        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_BLUEBERRY_MINT.jpg"
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_BLUEBERRY_MINT.jpg",
+        "description": "Una combinación que tuvo éxito. Zomo presenta a los amantes de la buena esencia, y que son exigentes tratándose de una mezcla de calidad. Ella trae el sabor exótico de blueberry con la refrescancia de la menta."
     },
     {
         "id": 2, 
         "title":"Cola Mint", 
         "brand":"Zomo",
         "price":450, 
-        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COLA_MINT.jpg"
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COLA_MINT.jpg",
+        "description": "Zomo ofrece a los narguileros una esencia que combina el sabor y el refresco de la menta con refrescos de cola. Esta esencia llegó a abrir todos los sentidos, su sabor se asemeja a una refrescante cola con el toque de menta para hacerlo aún más llamativo. Ideal para quienes gustan de sabores y aromas dulces y suaves."
     },
     {
         "id": 3, 
         "title":"Cool Lemon",  
         "brand":"Zomo",
         "price":450, 
-        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COOL_LEMON.jpg"
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_COOL_LEMON.jpg",
+        "description": "Para aquellos que les gusta el sabor cítrico del limón, les encantará esta sensacional esencia. Este sabor te lleva a la sensación cítrica del limón con una frescura sin igual. Ideal para relajar los pensamientos de quienes gustan de una buena esencia en sus sesiones."
     },
     {
         "id": 4, 
         "title":"Framboera",  
         "brand":"Zomo",
         "price":450, 
-        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/11/ZOMO_2019_PY_50G_FRAMBOERA.png"
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/11/ZOMO_2019_PY_50G_FRAMBOERA.png",
+        "description":"Ah, que coctel delicioso. El sabor Framboera es todo lo que esta bien, hicimos un drink especial con frambuesa y pera, el resultado fue increíble. Experimenta ese sabor que llegó con todo en la línea Drinks."
     },
     {
         "id": 5, 
         "title":"Tanger",  
         "brand":"Zomo",
         "price":450, 
-        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_SPLASH_TANGER.jpg"
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_SPLASH_TANGER.jpg",
+        "description": "Una esencia que aporta todo el poder de la mandarina. Un sabor con ese toque delicado y cítrico que solo te da la mandarina."
     },
     {
         "id": 6, 
         "title":"Dry Zahara",  
         "brand":"Zomo",
-        "price":450, 
-        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_DRY_SAHARA.jpg"
+        "price":500, 
+        "picUrl":"https://cdn.zomoofficial.com/wp-content/uploads/2020/02/ZOMO_2019_PY_50G_DRY_SAHARA.jpg",
+        "description": "Los misterios del desierto en una experiencia increíble, eso es lo que Zomo trae con la esencia Dry Sahara de la línea World Experience, que está siendo un éxito en las tiendas de narguile y en las sesiones del país. Una sensación refrescante a café intenso. Dry Sahara posee un sabor único, el contraste del calor local con un sabor fresco. Un viaje alrededor del mundo por medio de nuestras esencias. Llega la línea World Experience, que une sabores de todo el mundo directamente en tu cazoleta."
     }
 ]

@@ -2,6 +2,7 @@
 import './App.css';
 import { ItemListContainer } from './components/shop/ItemListContainer';
 import { NavBar } from './components/navbar/NavBar';
+import { ItemDetailContainer } from './components/shop/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   
@@ -9,7 +10,9 @@ function App() {
     <>
       <NavBar></NavBar>
       <ItemListContainer greetings="eat, sleep and smoke shisha."/>
-
+      <div className="container mt-2">
+         <ItemDetailContainer/>
+      </div>
     </>
   )
 }

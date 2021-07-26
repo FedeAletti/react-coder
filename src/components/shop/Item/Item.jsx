@@ -10,7 +10,7 @@ export const Item = ({title, price, img, brand}) => {
     return (
         <div className="col mb-2 ">
             <div className="height d-flex justify-content-center align-items-center">
-                <div className="card p-3 ">
+                <div className="card p-3 w-100">
                     <div className="d-flex justify-content-between align-items-center ">
                         <div className="mt-2">
                             <h4 className="text-uppercase">${price}</h4>
