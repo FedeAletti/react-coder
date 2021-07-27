@@ -16,7 +16,7 @@ function App() {
         <Switch>
             <>
               <NavBar/>
-              <Route exact path="/category/">
+              <Route exact path="/">
                 <ItemListContainer greetings="eat, sleep and smoke shisha."/>
               </Route>
               <Route exact path="/category/:categoryId">

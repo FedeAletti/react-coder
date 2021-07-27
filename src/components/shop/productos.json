@@ -114,7 +114,7 @@
         "brand":"Albabil",
         "price": 850, 
         "picUrl":"https://i.ibb.co/1bXS115/carbon-Coco.jpg",
-        "description": "El Carbon de Coco Natural tiene las siguientes caracteristicas que hacen que sean el mejor para usar Narguile o Shisha: <br/>No contiene Sabor alguno. <br/>Son los de Mejor porte calorico <br/>Son de combustion pareja y no generan olores <br/>La ceniza no se disuelve como otros carbones haciendo que no se derrame en la cazoleta-"
+        "description": "El Carbon de Coco Natural tiene las siguientes caracteristicas que hacen que sean el mejor para usar Narguile o Shisha: No contiene Sabor alguno, son los de Mejor porte calorico, son de combustion pareja y no generan olores, la ceniza no se disuelve como otros carbones haciendo que no se derrame en la cazoleta"
     },
     {
         "id": 14,
@@ -123,6 +123,6 @@
         "brand":"Pineapple",
         "price": 150, 
         "picUrl":"https://i.ibb.co/0hSvq1K/D-NQ-NP-722071-MLA40006971668-122019-O.jpg",
-        "description": "Carbones pineapples, prende facil. <br/>Los carbones pineapples son los mejores carbones del mercado, todos los que los probaron los recomiendan"
+        "description": "Carbones pineapples, prende facil. Los carbones pineapples son los mejores carbones del mercado, todos los que los probaron los recomiendan"
     }
 ]

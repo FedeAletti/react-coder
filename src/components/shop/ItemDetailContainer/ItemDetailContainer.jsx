@@ -12,27 +12,22 @@ export const ItemDetailContainer = () => {
     console.log(itemId);
 
     useEffect(() => {
-        getItem()
-            .then(resp => setItem(resp.filter(it => console.log(it.id === itemId))))
-    }, [itemId])
-
-    // useEffect(() => {
-    //     if (itemId === undefined ) {
-    //         getItem()
-    //         .then(resp => setItem(resp))
-    //     }else{
-    //         getItem()
-    //         .then(resp => setItem(resp.filter(it => console.log(it.id === itemId))))
-    //     }
-    // },[itemId])
-    console.log(itemId);
-    //it.id=== itemId
+        if (itemId === undefined ) {
+            getItem()
+            .then(resp => setItem(resp))
+        }else{
+            getItem()
+            .then(resp => setItem(resp.filter(it => it.id === itemId )))
+        }
+    },[itemId])
     
+    console.log(itemId);
+
     return (
         <>    
             <div className="container mt-2">
                 {item.map(itemDetail=> 
-                    <ItemDetail item={itemDetail} key={itemDetail.id} />)}  
+                    <ItemDetail id={itemId} key={itemDetail.id} />)}  
             </div>
         </>
     )

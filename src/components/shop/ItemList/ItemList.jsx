@@ -16,7 +16,7 @@ export const ItemList = () => {
             .then(resp => setItem(resp))
         }else{
             getItem()
-            .then(resp => setItem(resp.filter(it => it.category=== categoryId)))
+            .then(resp => setItem(resp.filter(it => it.category === categoryId)))
         }
     },[categoryId])
 
@@ -25,7 +25,7 @@ export const ItemList = () => {
     return (
         <div className="row ">
             {item.map(prod =>(
-                <Item title={prod.title} price={prod.price} brand={prod.brand} img={prod.picUrl} key={prod.id} />
+                <Item id={prod.id} title={prod.title} price={prod.price} brand={prod.brand} img={prod.picUrl} key={prod.id} />
             ))} 
         </div>
     )

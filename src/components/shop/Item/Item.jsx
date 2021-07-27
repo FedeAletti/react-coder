@@ -1,7 +1,7 @@
-import React from 'react'
+import {Link} from 'react-router-dom'
 import { ItemCount } from '../../ItemCount/ItemCount'
 
-export const Item = ({title, price, img, brand}) => { 
+export const Item = ({title, price, img, brand, id}) => { 
 
     const handleCount=(cant)=>{
         alert(`Se agregaron ${cant} items de ${brand + ' ' + title}`);
@@ -25,7 +25,7 @@ export const Item = ({title, price, img, brand}) => {
                     </div>
                     <div className="row">
                         <div className="col">
-                            <button className="btn btn">Ver mas</button>
+                            <Link to={`/item/${id}`} className="btn btn">Ver mas</Link>
                         </div>
                         <div className="col">
                             <div className="d-flex justify-content-center ">
