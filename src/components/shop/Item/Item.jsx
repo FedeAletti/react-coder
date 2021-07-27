@@ -25,7 +25,7 @@ export const Item = ({title, price, img, brand, id}) => {
                     </div>
                     <div className="row">
                         <div className="col">
-                            <Link to={`/item/${id}`} className="btn btn">Ver mas</Link>
+                            <Link to={`/item/${id}`} className="btn bg-principal text-white btn-block">Ver mas</Link>
                         </div>
                         <div className="col">
                             <div className="d-flex justify-content-center ">
