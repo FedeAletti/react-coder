@@ -1,10 +1,11 @@
-import React from 'react'
 import { ItemList } from './ItemList/ItemList'
 import './itemscontainer.css'
 
 export const ItemListContainer = (props) => {
     
     const {greetings} = props
+    
+
     return (
         <>
             <div className="banner bg-principal pb-2 pt-2">

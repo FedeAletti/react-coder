@@ -23,9 +23,17 @@ export const Item = ({title, price, img, brand}) => {
                             <img src={img} width="200" alt=""/> 
                         </div>
                     </div>
-                    <div className="d-flex justify-content-center ">
-                        <ItemCount stock={9} initial={1} onAdd={handleCount}/>
+                    <div className="row">
+                        <div className="col">
+                            <button className="btn btn">Ver mas</button>
+                        </div>
+                        <div className="col">
+                            <div className="d-flex justify-content-center ">
+                                <ItemCount stock={9} initial={1} onAdd={handleCount}/>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             

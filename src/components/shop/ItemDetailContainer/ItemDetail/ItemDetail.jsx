@@ -2,6 +2,8 @@ import React from 'react'
 
 export const ItemDetail = ({item}) => {
     
+    console.log(item);
+    
     return (
         <>
             <div className=" d-flex justify-content-center align-items-center shadow">

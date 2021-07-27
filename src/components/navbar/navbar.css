@@ -19,10 +19,10 @@
     .cartWidget{
         order:1;
     }
-    .nav-item{
+    .nav-link{
         margin-right: 3rem;
     }
-    .nav-item:last-of-type{
+    .nav-link:last-of-type{
         margin-right: 0;
     }
     .flex-navbar{
