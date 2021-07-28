@@ -18,4 +18,4 @@ ___
     - Para íconos necesarios a lo largo del sitio.
  
 ___
-![GIF muestra](https://i.ibb.co/Z1qkhxM/Shisha-Shop-Brave-2021-07-28-15-37-20.gif){width=100% }
+![GIF muestra](https://i.ibb.co/Z1qkhxM/Shisha-Shop-Brave-2021-07-28-15-37-20.gif)
