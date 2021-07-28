@@ -1,3 +1,8 @@
 Link{
     border: 1px solid red;
 }
+.ver-mas{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}

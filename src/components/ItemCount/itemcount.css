@@ -14,3 +14,8 @@ button i{
 .agreg-carrito{
     display: block;
 }
+.btns-count{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}

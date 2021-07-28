@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import { ItemCount } from '../../ItemCount/ItemCount'
+import './item.css'
 
 export const Item = ({title, price, img, brand, id}) => { 
 
@@ -11,7 +12,8 @@ export const Item = ({title, price, img, brand, id}) => {
         <div className="col mb-2 ">
             <div className="height d-flex justify-content-center align-items-center">
                 <div className="card p-3 w-100">
-                    <div className="d-flex justify-content-between align-items-center ">
+                   
+                    <div className="d-flex justify-content-evenly align-items-center ">
                         <div className="mt-2">
                             <h4 className="text-uppercase">${price}</h4>
                             <div className="mt-5">
@@ -21,13 +23,15 @@ export const Item = ({title, price, img, brand, id}) => {
                         </div>
                         <div className="image"> 
                             <img src={img} width="200" alt=""/> 
+                            
                         </div>
+
                     </div>
                     <div className="row">
-                        <div className="col">
-                            <Link to={`/item/${id}`} className="btn bg-principal text-white btn-block">Ver mas</Link>
+                        <div className="col ver-mas mt-4">
+                            <Link to={`/item/${id}`} className="w-100 btn bg-principal text-white d-block">Ver mas</Link>
                         </div>
-                        <div className="col">
+                        <div className="col">                            
                             <div className="d-flex justify-content-center ">
                                 <ItemCount stock={9} initial={1} onAdd={handleCount}/>
                             </div>
