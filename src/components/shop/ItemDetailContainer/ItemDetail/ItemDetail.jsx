@@ -1,7 +1,26 @@
-export const ItemDetail = ({item}) => {
+import { useParams } from 'react-router-dom'
+import {useEffect, useState} from 'react'
+import { getItem } from '../getItem'
+
+
+export const ItemDetail = () => {
     
-    console.log(item);
+    const [item, setItem] = useState({})
+    const { itemId } = useParams()
+
+
+    useEffect(() => {
+        if (itemId === undefined ) {
+            getItem().then(resp => setItem(resp))
+        }else{
+            // getItem()
+            // .then(resp => setItem(resp.filter(item => item.id === itemId)))
+            getItem().then((resp) => setItem(resp[itemId]));
+        }
+    },[itemId])
     
+    console.log(item)
+
     return (
         <>
             <div className=" d-flex justify-content-center align-items-center shadow">
@@ -24,6 +43,10 @@ export const ItemDetail = ({item}) => {
                 </div>
             </div>
             
+
+
+
+
         </>
     )
 }
