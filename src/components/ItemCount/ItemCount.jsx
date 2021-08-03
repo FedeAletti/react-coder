@@ -1,7 +1,22 @@
 import {useState} from 'react' 
+import { ButtonShop } from './ButtonShop/ButtonShop';
 import './itemcount.css'
 
-export const ItemCount = ({initial, stock, onAdd}) => {
+
+// function Select({ options, onSelect, defaultOption }) {
+//     return (
+//       <select onChange={(e) => onSelect(e.target.value)}>
+//         {options.map((o) => (
+//           <option value={o.value}>{o.text}</option>
+//         ))}
+//       </select>
+//     );
+// }
+
+
+
+
+export const ItemCount = ({initial, stock, onAdd, count}) => {
 
     const [cantidad, setCantidad] = useState(initial)
     const handleAdd=()=>{
@@ -14,7 +29,8 @@ export const ItemCount = ({initial, stock, onAdd}) => {
             setCantidad(cantidad-1)
         }
     }
-  
+    
+      
     return (
         <>
             <div className="d-flex flex-column ">
@@ -31,10 +47,7 @@ export const ItemCount = ({initial, stock, onAdd}) => {
                 </div>
                 
                 <div className="agreg-carrito">
-                    <button className="btn bg-principal text-white btn-block btn-carrito "
-                        onClick={()=>onAdd(cantidad)}>
-                            Agregar al Carrito
-                    </button>
+                    <ButtonShop onAdd={onAdd} count={count} cantidad={cantidad}/>
                 </div>
             </div>
             

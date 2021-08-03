@@ -1,12 +1,9 @@
 import {Link} from 'react-router-dom'
-import { ItemCount } from '../../ItemCount/ItemCount'
 import './item.css'
 
 export const Item = ({title, price, img, brand, id}) => { 
 
-    const handleCount=(cant)=>{
-        alert(`Se agregaron ${cant} items de ${brand + ' ' + title}`);
-    }
+
     
     return (
         <div className="col mb-2 ">
@@ -30,11 +27,6 @@ export const Item = ({title, price, img, brand, id}) => {
                     <div className="row">
                         <div className="col ver-mas mt-4">
                             <Link to={`/item/${id}`} className="w-100 btn bg-principal text-white d-block">Ver mas</Link>
-                        </div>
-                        <div className="col">                            
-                            <div className="d-flex justify-content-center ">
-                                <ItemCount stock={9} initial={1} onAdd={handleCount}/>
-                            </div>
                         </div>
                     </div>
                     

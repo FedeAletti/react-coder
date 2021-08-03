@@ -20,52 +20,43 @@ export const ItemDetail = () => {
         }
     },[itemId])
 
-    // const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
     
-    // const handleCount=(cant)=>{
-    //     //alert(`Se agregaron ${item.cant} items de ${item.brand + ' ' + item.title}`);
-    //     setCount(cant)
-    //     console.log(count);
-    //     return ( 
-    //         <div>{count}</div>
-    //      )
-    // }
-    
+    const handleCount=(cant)=>{
+        setCount(cant)
+        console.log(`Se almacenó ${cant} cantidad de ${item.title}`);
+    }
 
     return (
         <>
             <div className=" d-flex justify-content-center align-items-center shadow">
                 <div className="card w-100 ">
-                                <div className="d-flex justify-content-between align-items-center container w-75 ">
-                                    <div className="row">
-                                        <div className="col-lg-6">
-                                            <div className="mt-2">
-                                                <div className="mt-5">
-                                                    <h4 className="main-heading mt-0">{item.brand}</h4>
-                                                    <h1 className="text-uppercase mb-0">{item.title}</h1>
-                                                    <h4 className="text-uppercase">${item.price}</h4>
-                                                    <hr />
-                                                    <h3 >Descripción: </h3>
-                                                    <p>{ item.description }</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="image"> 
-                                                <img src={item.picUrl} className="img-fluid"  alt=""/> 
-                                            </div>
-                                            
-                                            <div className="mb-4">
-                                                <ItemCount stock={item.stock} initial={1} onAdd={handleCount}/>
-                                            </div>
-
-                                        </div>
-                                        
+                    <div className="d-flex justify-content-between align-items-center container w-75 ">
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="mt-2">
+                                    <div className="mt-5">
+                                        <h4 className="main-heading mt-0">{item.brand}</h4>
+                                        <h1 className="text-uppercase mb-0">{item.title}</h1>
+                                        <h4 className="text-uppercase">${item.price}</h4>
+                                        <hr />
+                                        <h3 >Descripción: </h3>
+                                        <p>{ item.description }</p>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="image"> 
+                                    <img src={item.picUrl} className="img-fluid"  alt=""/> 
+                                </div>
+                                <div className="mb-4">
+                                    <ItemCount stock={item.stock} initial={1} onAdd={handleCount} count={count} />
+                                </div>
+
+                            </div>
                             
-                        
-                        
+                        </div>
+                    </div>
                 </div>
             </div>
 
