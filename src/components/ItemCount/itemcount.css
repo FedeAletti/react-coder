@@ -19,3 +19,6 @@ button i{
     justify-content: space-between;
     align-items: baseline;
 }
+.btn-carrito{
+    width: 100%;
+}
