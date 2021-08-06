@@ -1,6 +1,5 @@
-// import {useEffect, useState} from 'react'
 import { ItemDetail } from './ItemDetail/ItemDetail'
-//import { getItem } from './getItem'
+
 
 export const ItemDetailContainer = () => {
     return (

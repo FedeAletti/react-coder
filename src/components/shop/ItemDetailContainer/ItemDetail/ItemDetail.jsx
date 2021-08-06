@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import { getItem } from '../getItem'
 import { ItemCount } from '../../../ItemCount/ItemCount'
+import { useCartContext } from '../../Cart/CartContext/CartContext'
 
 
 export const ItemDetail = () => {
@@ -22,9 +23,13 @@ export const ItemDetail = () => {
 
     const [count, setCount] = useState(0)
     
-    const handleCount=(cant)=>{
+    const {cart, setCart} = useCartContext()
+
+    const addCart=(cant)=>{
         setCount(cant)
         console.log(`Se almacenó ${cant} cantidad de ${item.title}`);
+        setCart(item, ...cart )
+        
     }
 
     return (
@@ -50,7 +55,7 @@ export const ItemDetail = () => {
                                     <img src={item.picUrl} className="img-fluid"  alt=""/> 
                                 </div>
                                 <div className="mb-4">
-                                    <ItemCount stock={item.stock} initial={1} onAdd={handleCount} count={count} />
+                                    <ItemCount item={item} initial={1} onAdd={addCart} count={count} />
                                 </div>
 
                             </div>

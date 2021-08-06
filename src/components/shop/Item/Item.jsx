@@ -2,8 +2,6 @@ import {Link} from 'react-router-dom'
 import './item.css'
 
 export const Item = ({title, price, img, brand, id}) => { 
-
-
     
     return (
         <div className="col mb-2 ">
