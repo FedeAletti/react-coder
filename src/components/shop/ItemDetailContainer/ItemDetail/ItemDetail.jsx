@@ -9,7 +9,7 @@ import { getItem } from '../../Item/getItem'
 export const ItemDetail = () => {
     
     const [products, setProducts] = useState({})
-    console.log(products);
+    // console.log(products);
     const { itemId } = useParams()    
     
     useEffect(() => {
@@ -27,7 +27,7 @@ export const ItemDetail = () => {
     //const { products, setProducts } = useAppContext();
     
     const onAdd=(cant)=>{
-        console.log(`Se almacenó ${cant} cantidad de ${products.title}`);
+        // console.log(`Se almacenó ${cant} cantidad de ${products.title}`);
         setCount(cant)
         // setCart({item, ...cart} )
         // console.log(cart);

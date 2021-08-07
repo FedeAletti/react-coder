@@ -7,7 +7,7 @@ export const useAppContext = () => useContext(AppContext);
 
 const AppContextProvider = ({ children }) => {
   const [products, setProducts] = useState(prods);
-    console.log(products);
+    // console.log(products);
   return (
     <AppContext.Provider
       value={{

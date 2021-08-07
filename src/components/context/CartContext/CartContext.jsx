@@ -7,7 +7,7 @@ export const useCartContext =()=> useContext(CartContext);
 const CartContextProvider = ({children})=>{
 
     const [cart, setCart] = useState([])
-    console.log(cart);
+    //console.log(cart);
 
     const isInCart = id => cart.find(prod=> prod.id === id)
 
@@ -16,7 +16,7 @@ const CartContextProvider = ({children})=>{
         const newCart = [...cart]
         //Verificación 
         const productIsInCart = isInCart(product.id)
-        console.log(productIsInCart);
+        //console.log(productIsInCart);
     
         //Si el producto está en el carrito...
         if(productIsInCart){
@@ -26,7 +26,7 @@ const CartContextProvider = ({children})=>{
 
             //Actualizamos carrito
             setCart(newCart);
-            console.log(cart);
+            //console.log(cart);
             return
         }
         
@@ -38,7 +38,7 @@ const CartContextProvider = ({children})=>{
             product
         ]);
         
-        console.log(cart);
+        //console.log(cart);
     }
 
     const deleteFromCart = product =>{
@@ -47,10 +47,10 @@ const CartContextProvider = ({children})=>{
     
         //Verificación 
         const productIsInCart = isInCart(product.id)
-        console.log(productIsInCart);
+        //console.log(productIsInCart);
         
         if(!productIsInCart){
-            console.log('El producto no está acá');
+            //console.log('El producto no está acá');
             return;
         }
 
@@ -58,7 +58,7 @@ const CartContextProvider = ({children})=>{
             prod=>prod.id !== productIsInCart.id)
         
         setCart(deleteProduct)
-        console.log(cart);
+        //console.log(cart);
     
     }
 

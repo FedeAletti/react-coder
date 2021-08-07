@@ -4,12 +4,12 @@ import { useCartContext } from "../../context/CartContext/CartContext"
 export const Cart = () => {
 
     const {cart, deleteCart} = useCartContext()
-    console.log(cart);
+    // console.log(cart);
     return (
        
         <>
             <h1>Cart!!</h1>
-            {console.log(cart)}
+            {/* {console.log(cart)} */}
             
             {cart.length !== 0 &&(
                 <>

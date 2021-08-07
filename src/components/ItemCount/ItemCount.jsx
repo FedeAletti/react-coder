@@ -26,7 +26,7 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
     
     function handleClick(id, quant) {
         const findProductInDB = products.find(prod => prod.id === id);
-        console.log('DESDE ITEM: ', findProductInDB);
+        //console.log('DESDE ITEM: ', findProductInDB);
     
         if (!findProductInDB) {
           console.log('NO SE PUDO AGREGAR AL CARRITO!!');
