@@ -1,35 +1,36 @@
 import { useParams } from 'react-router-dom'
 import {useEffect, useState} from 'react'
-import { getItem } from '../getItem'
 import { ItemCount } from '../../../ItemCount/ItemCount'
-import { useCartContext } from '../../Cart/CartContext/CartContext'
+import { useCartContext } from '../../../context/CartContext/CartContext'
+import { useAppContext } from '../../../context/AppContext/AppContext'
+import { getItem } from '../../Item/getItem'
 
 
 export const ItemDetail = () => {
     
-    const [item, setItem] = useState({})
-    const { itemId } = useParams()
-
-
+    const [products, setProducts] = useState({})
+    console.log(products);
+    const { itemId } = useParams()    
+    
     useEffect(() => {
         if (itemId === undefined ) {
-            getItem().then(resp => setItem(resp))
+            getItem().then(resp => setProducts(resp))
         }else{
-            // getItem()
-            // .then(resp => setItem(resp.filter(item => item.id === itemId)))
-            getItem().then((resp) => setItem(resp[itemId]));
+            getItem()
+            .then(resp => setProducts(resp.filter(item => item.id === itemId)))
+            getItem().then((resp) => setProducts(resp[itemId]));
         }
     },[itemId])
 
     const [count, setCount] = useState(0)
     
-    const {cart, setCart} = useCartContext()
-
-    const addCart=(cant)=>{
+    //const { products, setProducts } = useAppContext();
+    
+    const onAdd=(cant)=>{
+        console.log(`Se almacenó ${cant} cantidad de ${products.title}`);
         setCount(cant)
-        console.log(`Se almacenó ${cant} cantidad de ${item.title}`);
-        setCart(item, ...cart )
-        
+        // setCart({item, ...cart} )
+        // console.log(cart);
     }
 
     return (
@@ -41,21 +42,21 @@ export const ItemDetail = () => {
                             <div className="col-lg-6">
                                 <div className="mt-2">
                                     <div className="mt-5">
-                                        <h4 className="main-heading mt-0">{item.brand}</h4>
-                                        <h1 className="text-uppercase mb-0">{item.title}</h1>
-                                        <h4 className="text-uppercase">${item.price}</h4>
+                                        <h4 className="main-heading mt-0">{products.brand}</h4>
+                                        <h1 className="text-uppercase mb-0">{products.title}</h1>
+                                        <h4 className="text-uppercase">${products.price}</h4>
                                         <hr />
                                         <h3 >Descripción: </h3>
-                                        <p>{ item.description }</p>
+                                        <p>{ products.description }</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="image"> 
-                                    <img src={item.picUrl} className="img-fluid"  alt=""/> 
+                                    <img src={products.picUrl} className="img-fluid"  alt=""/> 
                                 </div>
                                 <div className="mb-4">
-                                    <ItemCount item={item} initial={1} onAdd={addCart} count={count} />
+                                    <ItemCount product={products} initial={1} onAdd={onAdd} count={count} />
                                 </div>
 
                             </div>

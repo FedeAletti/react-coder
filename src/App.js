@@ -5,35 +5,38 @@ import { ItemListContainer } from './components/shop/ItemListContainer';
 import { NavBar } from './components/navbar/NavBar';
 import { ItemDetailContainer } from './components/shop/ItemDetailContainer/ItemDetailContainer';
 import {Cart}  from './components/shop/Cart/Cart';
-import CartContextProvider from './components/shop/Cart/CartContext/CartContext';
+import CartContextProvider from './components/context/CartContext/CartContext';
+import AppContextProvider from './components/context/AppContext/AppContext';
 
 function App() {
 
   return (
-    
-      <CartContextProvider>
-        <Router>
-          <Switch>
-              <>
-                <NavBar/>
+      <AppContextProvider>
+        <CartContextProvider>
+          <Router>
+            <Switch>
+                <>
+                  <NavBar/>
 
-                  <Route exact path="/">
-                    <ItemListContainer greetings="eat, sleep and smoke shisha."/>
-                  </Route>
-                  <Route exact path="/category/:categoryId">
-                    <ItemListContainer greetings="eat, sleep and smoke shisha."/>
-                  </Route>
-                  <Route exact path="/cart">
-                    <Cart/>
-                  </Route>
+                    <Route exact path="/">
+                      <ItemListContainer greetings="eat, sleep and smoke shisha."/>
+                    </Route>
+                    <Route exact path="/category/:categoryId">
+                      <ItemListContainer greetings="eat, sleep and smoke shisha."/>
+                    </Route>
+                    <Route exact path="/cart">
+                      <Cart/>
+                    </Route>
 
-                  <Route exact path="/item/:itemId" >
-                      <ItemDetailContainer/>
-                  </Route>
-              </>
-          </Switch>
-        </Router>
-      </CartContextProvider>
+                    <Route exact path="/item/:itemId" >
+                        <ItemDetailContainer/>
+                    </Route>
+                </>
+            </Switch>
+          </Router>
+        </CartContextProvider>
+
+      </AppContextProvider>
   )
 }
 
