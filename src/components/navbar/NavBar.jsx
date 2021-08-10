@@ -1,10 +1,17 @@
 import {Link} from 'react-router-dom'
 import { CartWidget } from '../cartwidget/CartWidget'
+import { useCartContext } from '../context/CartContext/CartContext'
 import './navbar.css'
 import logo from './navlogo.svg'
 
 
 export const NavBar = () => {
+
+    const {cart} = useCartContext()
+    console.log(cart);
+
+    cart.map(item => console.log(item.quantity))
+
     return (
         <>
         <nav className="navbar navbar-expand-xl navbar-light bg-light">
@@ -13,7 +20,13 @@ export const NavBar = () => {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>  
-                <Link to="/cart" className="cartWidget"><CartWidget/></Link>          
+                
+                { cart.length === 0 ? 
+                    <></>
+                    :
+                    // <Link to="/cart" className="cartWidget"><CartWidget/></Link>          
+                    <CartWidget />
+                }
                 
                 <div className="collapse navbar-collapse show m-auto flex-navbar" id="navbarBasic">
                     <div className="">

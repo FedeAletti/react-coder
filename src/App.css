@@ -1,6 +1,10 @@
 /* ======== Utilidades ======== */
 .bg-principal{
   background-color: #efb537;
+  transition: all 0.2s ease-in-out;
+}
+.bg-principal:hover{
+  background-color: #e0a82d;
 }
 /* ============ Personalizados ============ */
 body{

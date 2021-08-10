@@ -1,0 +1,10 @@
+@media (max-width: 666px){
+    .image{
+        width: 50%;
+    }
+}
+.image-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
