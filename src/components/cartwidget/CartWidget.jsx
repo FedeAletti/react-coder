@@ -8,12 +8,23 @@ export const CartWidget = () => {
     
     const [cartClick, setCartClick] = useState(false)
 
+    const {cart} = useCartContext();
+    let itemsCartWidg = 0
+    //const total = cart.forEach(prod => (prod.price))
+    for (let i = 0; i < cart.length; i++) {
+        const cant = cart[i].quantity;
+        
+        console.log(cant); 
+        itemsCartWidg = itemsCartWidg + cant
+    }
+    console.log(itemsCartWidg);
     //console.log(cartClick);
 
     return (
         <>
             <div className="cartWidget" onClick={(e)=>setCartClick(!cartClick)}>
-                <i className="fas fa-shopping-cart cart-style"></i>
+                <span className="cartCant">{itemsCartWidg}</span>
+                <i className="fas fa-shopping-cart cart-style"><p></p></i>
                
                 {/*cartClick ?
                     cart.length === 0 ?

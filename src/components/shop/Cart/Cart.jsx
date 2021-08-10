@@ -6,9 +6,16 @@ import { CartResume } from './CartResume/CartResume'
 export const Cart = () => {
 
     const {cart, deleteCart} = useCartContext()
-
-    const total = cart.forEach(prod => (prod.price))
-
+    let total = 0
+    //const total = cart.forEach(prod => (prod.price))
+    for (let i = 0; i < cart.length; i++) {
+        const price = cart[i].price * cart[i].quantity;
+        
+        console.log(price); 
+        total = total + price
+    }
+    console.log(total);
+    
     return (
        
         <div className="container">
@@ -39,7 +46,7 @@ export const Cart = () => {
                             
                                 {cart.map(prod => <CartResume key={prod.id} prod={prod}/>)}
 
-                                {/* <h3>`Total a pagar: ${total}`</h3> */}
+                                <h3>Total a pagar: ${total}</h3> 
 
                                 <button className="btn btn-danger" onClick={deleteCart}>Limpiar Carrito</button>
                             </div>

@@ -2,6 +2,12 @@
     color: #efb537;
     font-size: 1.5rem;
 }
+.cartCant{
+    color: #efb537;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 1.3rem;
+}
 
 .cartWidget{
     position: relative;
