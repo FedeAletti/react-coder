@@ -24,7 +24,7 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
     const { addToCart } = useCartContext();
     const { products } = useAppContext();
     
-    function handleClick(id, quant) {
+    function handleClick(id) {
         const findProductInDB = products.find(prod => prod.id === id);
         //console.log('DESDE ITEM: ', findProductInDB);
     
@@ -34,19 +34,9 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
         }
     
         addToCart(findProductInDB);
+        onAdd()
     }
 
-    // const handleClick = id => {
-    //     const findProductInDB = products.find(prod => prod.id === id);
-    //     console.log('DESDE ITEM: ', findProductInDB);
-    
-    //     if (!findProductInDB) {
-    //       console.log('NO SE PUDO AGREGAR AL CARRITO!!');
-    //       return;
-    //     }
-    
-    //     addToCart(findProductInDB);
-    // };
       
     return (
         <>
@@ -71,10 +61,11 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
                     //    onClick={()=>onAdd(cantidad)}
                     onClick={() => handleClick(product.id)}
                     >
-                        {count === 0 ? 
+                        Agregar al Carrito
+                        {/* {count === 0 ? 
                             'Agregar al Carrito'
                             : <Link to={'/cart'} className="text-white">Terminar Compra</Link>
-                        }
+                        } */}
                     </button>
                 </div>
             </div>

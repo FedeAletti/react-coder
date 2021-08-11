@@ -2,8 +2,7 @@ import {useState, useEffect} from 'react'
 import { Item } from '../Item/Item'
 import { useParams } from 'react-router-dom'
 //import { useAppContext } from '../../context/AppContext/AppContext'
-import { getItem } from '../Item/getItem'
-//import prods from '../productos.json'
+import {getFirestore} from '../firebaseService'
 
 
 export const ItemList = () => {
@@ -11,17 +10,18 @@ export const ItemList = () => {
     const [products, setProducts] = useState([])
     const { categoryId } = useParams()
 
-    
-
     useEffect(() => {
-        if (categoryId === undefined ) {
-            getItem()
-            .then(resp => setProducts(resp))
+        if (categoryId === undefined) {
+            const dbQuery = getFirestore()
+                dbQuery.collection('items').get()
+                    .then(resp => setProducts(resp.docs.map(it=> ({...it.data(), id: it.id}) )))
         }else{
-            getItem()
-            .then(resp => setProducts(resp.filter(it => it.category === categoryId)))
+            const dbQuery = getFirestore()
+                dbQuery.collection('items').where('category', '==', categoryId).get()
+                    .then(resp => setProducts(resp.docs.map(it=> ({...it.data(), id: it.id}) )))
         }
     },[categoryId])
+
 
     return (
         <div className="row ">

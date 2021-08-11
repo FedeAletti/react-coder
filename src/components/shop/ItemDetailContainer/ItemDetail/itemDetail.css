@@ -1,0 +1,14 @@
+.btn-carrito{
+    width: 100%;
+}
+.btn-carrito {
+    text-decoration: none!important;
+    color: white;
+    font-weight: bold;
+}
+.btn-carrito-mas{
+    background-color: #efb537b2;
+    display: block;
+    width: 100%;
+    margin-top: 0.2rem
+}
