@@ -10,7 +10,6 @@ import { getFirestore } from '../../firebaseService'
 export const ItemDetail = () => {
     
     const [products, setProducts] = useState({})
-    // console.log(products);
     const { itemId } = useParams()    
     
     useEffect(() => {
@@ -18,7 +17,6 @@ export const ItemDetail = () => {
         dbQuery.collection('items').doc(itemId).get()
         .then(resp => setProducts({id: resp.id, ...resp.data()}))
     }, [itemId])
-    console.log(products);
 
     const [count, setCount] = useState(0)
     const [terminar, setTerminar] = useState(false)
@@ -50,7 +48,6 @@ export const ItemDetail = () => {
                                     <img src={products.picUrl} className="img-fluid mt-3"  alt=""/> 
                                 </div>
                                 <div className="mb-4">
-                                    {/* <ItemCount product={products} initial={1} onAdd={onAdd} count={count} /> */}
                                     {terminar ? (
                                         <>
                                         <Link  to={'/cart'} className="btn bg-principal text-white btn-carrito mt-2">

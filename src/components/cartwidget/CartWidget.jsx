@@ -10,15 +10,11 @@ export const CartWidget = () => {
 
     const {cart} = useCartContext();
     let itemsCartWidg = 0
-    //const total = cart.forEach(prod => (prod.price))
     for (let i = 0; i < cart.length; i++) {
         const cant = cart[i].quantity;
         
-        console.log(cant); 
         itemsCartWidg = itemsCartWidg + cant
     }
-    console.log(itemsCartWidg);
-    //console.log(cartClick);
 
     return (
         <>

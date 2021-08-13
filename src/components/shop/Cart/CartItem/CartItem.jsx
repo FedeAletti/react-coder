@@ -4,7 +4,6 @@ import './cartItem.css'
 
 export default function CartItem({product}) {
     const { deleteFromCart } = useCartContext();
-    //console.log(product)
 
     return (
       <>
@@ -22,7 +21,7 @@ export default function CartItem({product}) {
                         <h1 className="text-uppercase mb-0">{product.title}</h1>
                         <h4 className="text-uppercase">${product.price * product.quantity}</h4>
                         <hr />
-                        <button className="btn btn-success" onClick={() => deleteFromCart(product)}
+                        <button className="btn btn-danger" onClick={() => deleteFromCart(product)}
                           >Eliminar del Carrito</button>
                     </div>
                   </div>

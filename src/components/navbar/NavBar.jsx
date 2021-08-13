@@ -8,9 +8,6 @@ import logo from './navlogo.svg'
 export const NavBar = () => {
 
     const {cart} = useCartContext()
-    console.log(cart);
-
-    cart.map(item => console.log(item.quantity))
 
     return (
         <>
