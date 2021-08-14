@@ -27,16 +27,26 @@ export const Cart = () => {
     
     const handlerSubmit = (e) => {
         e.preventDefault();
-        const db = getFirestore()
-        db.collection('order').add(order)
-        .then(resp => swal({
-                title: "Tu orden fue enviada con éxito!",
-                text: `Tu n° de orden es: ${resp.id}`,
-                icon: "success",
+        if (buyer.name !== '' && buyer.phone !== '' && buyer.email !== '') {
+            const db = getFirestore()
+            db.collection('order').add(order)
+            .then(resp => swal({
+                    title: "Tu orden fue enviada con éxito!",
+                    text: `Tu n° de orden es: ${resp.id}`,
+                    icon: "success",
+                    button: "Ok",
+                }))
+            .then(resp => deleteCart())
+            .catch(err => swal("Un error ha ocurrido", "Inténtalo nuevamente", "error"))
+            //.finally(() => {setLoading(false)})
+        } else{
+            swal({
+                title: "Hubo un error en tus datos",
+                text: "Revisa el formulario de tus datos y vuelve a enviar el pedido",
+                icon: "error",
                 button: "Ok",
-            }))
-        .catch(err => swal("Un error ha ocurrido", "Inténtalo nuevamente", "error"))
-        //.finally(() => {setLoading(false)})
+            })
+        }
     }
     const handlerChange = (e) => {
         setBuyer({
@@ -95,13 +105,13 @@ export const Cart = () => {
                                         value={order.name} />
                                     <input
                                         className="form-control mb-2" 
-                                        type="text"
+                                        type="number"
                                         placeholder="Telefono" 
                                         name="phone"
                                         value={order.phone}  />
                                     <input
                                         className="form-control mb-2" 
-                                        type="text"
+                                        type="email"
                                         placeholder="Email" 
                                         name="email"
                                         value={order.email}  />

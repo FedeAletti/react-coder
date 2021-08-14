@@ -19,7 +19,6 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
             setCantidad(cantidad-1)
         }
     }
-
     //Context 
     const { addToCart } = useCartContext();
     const { products } = useAppContext();
