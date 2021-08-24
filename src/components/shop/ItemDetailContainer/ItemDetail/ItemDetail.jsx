@@ -44,7 +44,7 @@ export const ItemDetail = () => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <div className="image"> 
+                                <div className=""> 
                                     <img src={products.picUrl} className="img-fluid mt-3"  alt=""/> 
                                 </div>
                                 <div className="mb-4">

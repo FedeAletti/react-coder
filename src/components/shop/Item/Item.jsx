@@ -4,8 +4,8 @@ import './item.css'
 export const Item = ({title, price, img, brand, id}) => { 
     
     return (
-        <div className="col mb-2 ">
-            <div className="height d-flex justify-content-center align-items-center">
+        <div className="col itemListCol mb-2 ">
+            <div className="d-flex justify-content-center align-items-center">
                 <div className="card p-3 w-100">
                    
                     <div className="d-flex justify-content-evenly align-items-center ">
