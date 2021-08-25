@@ -20,7 +20,7 @@ export const Cart = () => {
     for (let i = 0; i < cart.length; i++) {
         const price = cart[i].price * cart[i].quantity;
         
-        total = total + price
+        total += price
     }
     const order = {buyer, item: cart, date: firebase.firestore.Timestamp.fromDate(new Date()),total}
     
@@ -38,7 +38,6 @@ export const Cart = () => {
                 }))
             .then(resp => deleteCart())
             .catch(err => swal("Un error ha ocurrido", "Inténtalo nuevamente", "error"))
-            //.finally(() => {setLoading(false)})
         } else{
             swal({
                 title: "Hubo un error en tus datos",

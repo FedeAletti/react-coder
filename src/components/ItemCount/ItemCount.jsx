@@ -1,12 +1,11 @@
 import {useState} from 'react' 
-import {Link} from 'react-router-dom'
 import './itemcount.css'
 import { useCartContext } from "../context/CartContext/CartContext"
 import { useAppContext } from '../context/AppContext/AppContext'
+import swal from 'sweetalert'
 
 
-export const ItemCount = ({initial, product, onAdd, count}) => {
-
+export const ItemCount = ({initial, product, onAdd}) => {
     const [cantidad, setCantidad] = useState(initial)
     
     const handleAdd=()=>{
@@ -19,20 +18,23 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
             setCantidad(cantidad-1)
         }
     }
-    //Context 
+
     const { addToCart } = useCartContext();
     const { products } = useAppContext();
     
-    function handleClick(id) {
+    function handleClick(id, cantidad) {
         const findProductInDB = products.find(prod => prod.id === id);
-        //console.log('DESDE ITEM: ', findProductInDB);
     
         if (!findProductInDB) {
-          console.log('NO SE PUDO AGREGAR AL CARRITO!!');
-          return;
+            swal({
+                title: "Hubo un error en tus datos",
+                text: "El producto no pudo ser añadido",
+                icon: "error",
+                button: "Ok",
+            })
+             return;
         }
-    
-        addToCart(findProductInDB);
+        addToCart(findProductInDB, cantidad);
         onAdd()
     }
 
@@ -54,17 +56,11 @@ export const ItemCount = ({initial, product, onAdd, count}) => {
                 </div>
                 
                 <div className="agreg-carrito">
-                    {/* <ButtonShop onAdd={onAdd} count={count} cantidad={cantidad}/> */}
 
                     <button className="btn bg-principal text-white btn-block btn-carrito "
-                    //    onClick={()=>onAdd(cantidad)}
-                    onClick={() => handleClick(product.id)}
+                    onClick={() => handleClick(product.id, cantidad)}
                     >
                         Agregar al Carrito
-                        {/* {count === 0 ? 
-                            'Agregar al Carrito'
-                            : <Link to={'/cart'} className="text-white">Terminar Compra</Link>
-                        } */}
                     </button>
                 </div>
             </div>

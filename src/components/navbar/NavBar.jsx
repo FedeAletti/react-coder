@@ -20,8 +20,7 @@ export const NavBar = () => {
                 
                 { cart.length === 0 ? 
                     <></>
-                    :
-                    // <Link to="/cart" className="cartWidget"><CartWidget/></Link>          
+                    : 
                     <CartWidget />
                 }
                 

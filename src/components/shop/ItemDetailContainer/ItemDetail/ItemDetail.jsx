@@ -2,9 +2,7 @@ import { useParams } from 'react-router-dom'
 import './itemDetail.css'
 import {useEffect, useState} from 'react'
 import { ItemCount } from '../../../ItemCount/ItemCount'
-import { useCartContext } from '../../../context/CartContext/CartContext'
 import {Link} from 'react-router-dom'
-//import { useAppContext } from '../../../context/AppContext/AppContext'
 import { getFirestore } from '../../firebaseService'
 
 export const ItemDetail = () => {
@@ -18,10 +16,8 @@ export const ItemDetail = () => {
         .then(resp => setProducts({id: resp.id, ...resp.data()}))
     }, [itemId])
 
-    const [count, setCount] = useState(0)
     const [terminar, setTerminar] = useState(false)
-    const onAdd = (cant) => {
-        //setCount(count + cant);
+    const onAdd = () => {
         setTerminar(true)
     };
   
@@ -61,7 +57,6 @@ export const ItemDetail = () => {
                                         product={products}
                                         initial={1}
                                         onAdd={onAdd}
-                                        count={count}
                                         />
                                     )}
 

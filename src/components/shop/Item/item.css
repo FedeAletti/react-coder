@@ -6,9 +6,6 @@ Link{
     align-items: flex-end;
     justify-content: space-around;
 }
-/* .col-Itemlist{
-    height:200px
-} */
 .itemListCol{
     width:100%;
 }

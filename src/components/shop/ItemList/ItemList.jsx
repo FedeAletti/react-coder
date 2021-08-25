@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import { Item } from '../Item/Item'
 import { useParams } from 'react-router-dom'
-//import { useAppContext } from '../../context/AppContext/AppContext'
 import {getFirestore} from '../firebaseService'
 
 

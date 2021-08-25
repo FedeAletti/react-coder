@@ -1,4 +1,3 @@
-//import prods from '../../shop/productos.json'
 import React, { createContext, useContext, useState, useEffect} from 'react';
 import {getFirestore} from '../../shop/firebaseService'
 
