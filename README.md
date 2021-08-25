@@ -20,7 +20,7 @@ ___
     - Utilizada para crear alerts con estilo amigable y mostrar tanto errores como procedimientos terminados.
 
 ___
-![GIF muestra](https://i.ibb.co/Z1qkhxM/Shisha-Shop-Brave-2021-07-28-15-37-20.gif)
+![GIF muestra](https://i.ibb.co/TYy6v8L/Shisha-Shop.gif)
 
 ___
 ## Installation
