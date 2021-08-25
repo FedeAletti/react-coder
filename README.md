@@ -16,6 +16,18 @@ ___
     - Para facilitar la parte de estilos del sitio, y centrar atención en la lógica de React.   
 - ### FontAwesome
     - Para íconos necesarios a lo largo del sitio.
- 
+- ### SweetAlert
+    - Utilizada para crear alerts con estilo amigable y mostrar tanto errores como procedimientos terminados.
+
 ___
 ![GIF muestra](https://i.ibb.co/Z1qkhxM/Shisha-Shop-Brave-2021-07-28-15-37-20.gif)
+
+___
+## Installation
+Se requiere Node.js para iniciar.
+
+Install the dependencies and devDependencies and start the server.
+
+```
+$ npm install
+```
