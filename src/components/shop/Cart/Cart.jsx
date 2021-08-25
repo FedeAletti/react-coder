@@ -57,7 +57,8 @@ export const Cart = () => {
     return (
        
         <div className="container">
-            <h1>Cart!!</h1>
+            <h1 className="p-3 mt-2 text-center">Bienvenido al Carrito!</h1>
+            <hr />
             
             <div className="row">
                 <div className="col-md-8">
@@ -74,8 +75,8 @@ export const Cart = () => {
                     )}
                     {cart.length === 0 && 
                     <>
-                        <h3>No hay productos en el carrito,</h3>
-                        <Link to='/' className="btn bg-principal text-white d-block w-50">Busquemos algunos <i className="fas fa-smile-wink fs-5"></i></Link> 
+                        <h3>Parece que no hay productos en el carrito,</h3>
+                        <Link to='/' className="btn bg-principal text-white d-block w-100 mt-3 fw-bolder fs-5">Busquemos algunos   <i className="ps-3 fas fa-smile-wink fs-5"></i></Link> 
                     </>
                     }
                 </div>
